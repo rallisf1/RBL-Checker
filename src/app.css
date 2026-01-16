@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    font-family: 'Nunito', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@import "tailwindcss";
+
+@plugin "flyonui" {
+    themes: corporate --default, black --prefersdark;
+}
+
+@plugin "flyonui/theme" {
+    name: "corporate";
+    default: true;
+    --color-primary: #09ace9;
+}
+
+@plugin "flyonui/theme" {
+    name: "black";
+    default: true;
+    --color-primary: #0dcaf0;
+    --color-accent: #4b3f8a;
+}
+
+@import "flyonui/variants.css";
+@plugin "@iconify/tailwind4";
+/* Required for Js components */
+
+@source "../node_modules/flyonui/flyonui.js";
+/* Required for Js components */
+
+/* Import Third-party override css */
+/* @import "flyonui/src/vendor/flatpickr.css"; */
+@import "flyonui/src/vendor/notyf.css";
+@import "flyonui/src/vendor/datatables.css";
+/* @import "flyonui/src/vendor/editor.css"; */
+/* @import "flyonui/src/vendor/fullcalendar.css"; */
+/* @import "flyonui/src/vendor/raty.css"; */
+/* @import "flyonui/src/vendor/waves.css"; */
+@import "flyonui/src/vendor/apexcharts.css";
