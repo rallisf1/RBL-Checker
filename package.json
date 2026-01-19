@@ -62,7 +62,7 @@
 		"jquery": "^3.7.1",
 		"loadash": "^1.0.0",
 		"notyf": "^3.10.0",
-		"pocketbase": "^0.26.5",
+		"pocketbase": "^0.26.6",
 		"theme-change": "^2.5.0"
 	}
 }
