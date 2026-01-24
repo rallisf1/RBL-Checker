@@ -16,7 +16,7 @@ services:
       PB_PASS: ${PB_PASS:?}
       WEBHOOK_URL: ${WEBHOOK_URL}
     labels:
-      traefik.http.middlewares.rblchecker-auth.basicauth.users: "${APP_USER:?}:${APP_PASS:?}"
+      traefik.http.middlewares.rblchecker-auth.basicauth.users: "spinworks:$2y$05$NO1sfOJzjTeV.S4qDtalZ.5JfYHMpm3.W.d7gRq0kJ.Pndpe2h37."
 
   dnsmasq:
     image: 4km3/dnsmasq:latest
