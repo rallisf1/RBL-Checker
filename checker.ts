@@ -1,6 +1,6 @@
 import { promises as dns } from "node:dns";
 import PocketBase from 'pocketbase';
-import {lookup} from 'dnsbl';
+import { lookup } from 'dnsbl';
 import { exit } from "node:process";
 
 const pb = new PocketBase(Bun.env.PB_URL);
@@ -31,7 +31,7 @@ for (const ip of ips) {
         }
     }
     for (const rbl of rbls) {
-        const result = await lookup(ip.ip, rbl.domain, {includeTxt: true});
+        const result = await lookup(ip.ip, rbl.domain, {includeTxt: true, servers: null});
         if(result.listed != ip.listed) {
             await pb.collection('ips').update(ip.id, {
                 listed: result.listed
@@ -47,7 +47,7 @@ for (const ip of ips) {
                         rbl,
                         result
                     })
-                })
+                });
             }
         }
         if(result.listed) {

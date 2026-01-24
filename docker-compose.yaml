@@ -4,8 +4,9 @@ services:
     name: rbl-checker
     depends_on:
       - dnsmasq
+    dns:
+      - 172.28.1.253
     environment:
-      - DNS_SERVER=dnsmasq
       - PB_URL=https://yourpb.domain.com
       - PB_USER=admin@domain.com
       - PB_PASS=YOUR_SUPER_STRONG_PASS
@@ -18,7 +19,7 @@ services:
       - NET_ADMIN
     networks:
       default:
-        ipv4_address: 172.28.1.253
+        ipv4_address: 172.28.1.253 # don't change this
     dns:
       - 1.1.1.1
       - 8.8.8.8
