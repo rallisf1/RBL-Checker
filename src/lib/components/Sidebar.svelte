@@ -63,8 +63,8 @@ let {name_company,logo_company,name_user,Home,Services,Domains,Footer,service_ti
                                 </a>
                             </li>
                         {/each}
-                        <hr class="border-base-content/20 -mx-2 my-1" />
                         {#if service_title}
+                        <hr class="border-base-content/20 -mx-2 my-1" />
 						<li class="menu-title">{service_title}</li>
                         {/if}
                         {#each Services as link}
@@ -79,7 +79,6 @@ let {name_company,logo_company,name_user,Home,Services,Domains,Footer,service_ti
                                 </a>
                             </li>
                         {/each}
-                        <hr class="border-base-content/20 -mx-2 my-1" />
                         {#if help_title}
                             <hr class="border-base-content/20 -mx-2 my-1" />
                             <li class="menu-title">{help_title}</li>
