@@ -7,6 +7,8 @@
 	let { data }: PageProps = $props();
 	let modalOpen = $state(false);
 	let modalIndex: string | number | undefined = $state();
+
+	// TODO: add table link to per-ip history /history?ip=${record.ip}
 </script>
 
 <div class="flex justify-between items-center">

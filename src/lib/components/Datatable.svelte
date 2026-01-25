@@ -25,7 +25,7 @@
 	}: Datatable = $props();
 
 	const options = {
-		pageLength: 10,
+		pageLength: 50,
 		pagingOptions: {
 			pageBtnClasses: 'btn btn-text btn-circle btn-sm'
 		}
